@@ -5,7 +5,7 @@ library(broom)
 bikeRouteData <- readOGR("data/Bike Routes/geo_export_5acdd40a-defd-4e38-bc51-9d35252ce617.shp")
 bikeRouteDataFort <- tidy(bikeRouteData)
 bikeRouteDataFort %>% ggplot(aes(x = long, y = lat, group = group)) +
-  geom_polygon(color = "green", fill = "white") +
+  geom_path(color = "green") +
   theme_void()
 
 roadsData <- readOGR("data/tl_2019_17_prisecroads/tl_2019_17_prisecroads.shp")
@@ -15,14 +15,14 @@ roadsDataChi <- roadsDataFort %>%
 roadsDataChi %>% 
   filter(piece == 1) %>%
   ggplot(aes(x = long, y = lat, group = group)) +
-  geom_polygon(color = "red", fill = "white") +
+  geom_path(color = "red", fill = "white") +
   theme_void()
 
 ggplot() +
-  geom_polygon(data = roadsDataChi,
+  geom_path(data = roadsDataChi,
                aes(x = long, y = lat, group = group),
                color = "red", fill = "white") +
-  geom_polygon(data = bikeRouteDataFort,
+  geom_path(data = bikeRouteDataFort,
                aes(x = long, y = lat, group = group),
                color = "green", fill = "white") +
   theme_void()
