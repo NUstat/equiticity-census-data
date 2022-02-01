@@ -15,14 +15,14 @@ roadsDataChi <- roadsDataFort %>%
 roadsDataChi %>% 
   filter(piece == 1) %>%
   ggplot(aes(x = long, y = lat, group = group)) +
-  geom_path(color = "red", fill = "white") +
+  geom_path(color = "red") +
   theme_void()
 
 ggplot() +
   geom_path(data = roadsDataChi,
                aes(x = long, y = lat, group = group),
-               color = "red", fill = "white") +
+               color = "red") +
   geom_path(data = bikeRouteDataFort,
                aes(x = long, y = lat, group = group),
-               color = "green", fill = "white") +
+               color = "green") +
   theme_void()
