@@ -298,7 +298,6 @@ acs_commute <- full_join(acs_commute, acs_final, by = c("commarea" = "commarea")
 
 
 acs_new <- read_csv("data/census_team_2015_2019_dat_new.csv") %>%
-  #dplyr::select(`sales and office occupations (estimate)`, `census geographic identifier`,`occupation total (estimate)`)
   dplyr::select(`census geographic identifier`,`occupation total (estimate)`,
   `wholesale trade (estimate)`, `retail trade (estimate)`, `information (estimate)`,
    `finance and insurance, and real estate, and rental and leasing (estimate)`,
@@ -347,8 +346,8 @@ acs_done <- full_join(acs_done, acs_commute, by = c("commarea" = "commarea")) %>
 
 for_fact_com <- acs_done %>%
   dplyr::select(non_white_perc, disabled_perc, no_vech_perc, renting_hh_perc, 
-              single_parent_perc, no_internet_perc, 
-              unemp_perc, bach, under_pov_perc, medinc, office_jobs_perc)
+              single_parent_perc, no_internet_perc, unemp_perc, bach, 
+              under_pov_perc, medinc, office_jobs_perc)
 
 
 fac <- factanal(for_fact_com, 1)
@@ -363,26 +362,48 @@ corrplot(cor(for_fact_com))
 ####################
 
 
-for_fact_com <- acs_done %>%
-  dplyr::select(non_white_perc, disabled_perc, no_vech_perc, renting_hh_perc, 
-                single_parent_perc, no_internet_perc, 
-                unemp_perc, under_pov_perc, medinc, office_jobs_perc)
+# for_fact_com <- acs_done %>%
+#   dplyr::select(non_white_perc, disabled_perc, no_vech_perc, renting_hh_perc, 
+#                 single_parent_perc, no_internet_perc, bach,
+#                 unemp_perc, under_pov_perc, medinc, office_jobs_perc)
+# 
+# 
+# fac <- factanal(for_fact_com, 1, scores = "regression")
+# 
+# print(fac$loadings)
+# 
+# 1-fac$uni
 
 
-fac <- factanal(for_fact_com, 1)
 
-print(fac$loadings)
+#############
 
-1-fac$uni
+# for_fact_com <- acs_done %>%
+#   dplyr::select(non_white_perc, disabled_perc, no_vech_perc, renting_hh_perc, 
+#                 single_parent_perc, no_internet_perc, bach,
+#                 unemp_perc, under_pov_perc, medinc, office_jobs_perc)
+# 
+
+fac <- factanal(~non_white_perc + disabled_perc + no_vech_perc + renting_hh_perc +
+                single_parent_perc + no_internet_perc + bach +
+                unemp_perc + under_pov_perc + medinc + office_jobs_perc, factors = 1, data = acs_done, scores = "regression")
+
+acs_done$disadvantage_index <- fac$scores
 
 
-ggplot(acs_agg_t) + 
-  geom_sf(aes(fill = disabled_perc, geometry = geometry)) + 
+
+#################
+
+
+acs_geo <- full_join(acs_done, neighborhoods, by = c("commarea" = "area_num_1"))
+
+ggplot(acs_geo) + 
+  geom_sf(aes(fill = disadvantage_index, geometry = geometry)) + 
   coord_sf() +
   scale_fill_viridis_c() +
   theme_classic() +
   theme(axis.ticks = element_blank(),
         axis.text = element_blank(),
         axis.line = element_blank()) +
-  labs(fill = "% Disabled")
+  labs(fill = "Disadvantage Index")
 
