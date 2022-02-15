@@ -121,3 +121,32 @@ data %>% ggplot(aes(x = `1.01 or more occupants per room (estimate)` / `occupant
   geom_histogram() +
   theme_minimal()
 
+#prop white vs approx average travel time
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `approximate total travel time (estimate)` / `travel total (estimate)`)) +
+  geom_point() +
+  theme_minimal()
+
+#prop white vs median household income
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `median household income in the past 12 months (in 2019 inflation-adjusted dollars) (estimate)`)) +
+  geom_point() +
+  theme_minimal()
+
+#prop white vs disability
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `total disability (esimate)` / (`male (estimate)` + `female (estimate)`))) +
+  geom_point() +
+  theme_minimal()
+
+#prop white vs transportation
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `public transportation (excluding taxicab) (estimate)` / `transportation total (estimate)`)) +
+  geom_point() +
+  theme_minimal()
+
+#prop white vs employment
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `in labor force (estimate)` / `employment total (estimate)`)) +
+  geom_point() +
+  theme_minimal()
+
+#prop white vs occupancy
+data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `owner occupied (estimate)` / `occupants total (estimate)`)) +
+  geom_point() +
+  theme_minimal()
