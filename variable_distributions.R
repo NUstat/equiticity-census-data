@@ -159,6 +159,7 @@ data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = 
 data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = `owner occupied (estimate)` / `occupants total (estimate)`)) +
   geom_point() +
   theme_minimal()
+<<<<<<< HEAD
 
 
 corr_matrix <- data %>% dplyr::select(c(`prop some degree (estimate)`,
@@ -172,3 +173,5 @@ corr_matrix <- data %>% dplyr::select(c(`prop some degree (estimate)`,
                 `prop 1.01 or more occupants per room (estimate)`,
                 `median household income in the past 12 months (in 2019 inflation-adjusted dollars) (estimate)`)) %>% 
   cor(use = "complete.obs")
+=======
+>>>>>>> e10f3ecabf9aff1f40cdd62bb78ba5f94d0300f2
