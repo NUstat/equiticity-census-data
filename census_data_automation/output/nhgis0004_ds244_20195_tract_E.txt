@@ -1,0 +1,155 @@
+Codebook for NHGIS data file
+Additional documentation on NHGIS data sources is available at:
+https://www.nhgis.org/documentation/tabular-data
+
+Column Names : 
+
+GIS Join Match Code
+Data File Year
+State Postal Abbreviation
+State Name
+State Code
+County Name
+County Code
+Census Tract Code
+Census Geographic Identifier
+Area Name
+Means of Transportation to Work Total
+Car, truck, or van
+Car, truck, or van: Drove alone
+Car, truck, or van: Carpooled
+Car, truck, or van: Carpooled: In 2-person carpool
+Car, truck, or van: Carpooled: In 3-person carpool
+Car, truck, or van: Carpooled: In 4-person carpool
+Car, truck, or van: Carpooled: In 5- or 6-person carpool
+Car, truck, or van: Carpooled: In 7-or-more-person carpool
+Public transportation (excluding taxicab)
+Public transportation (excluding taxicab): Bus
+Public transportation (excluding taxicab): Subway or elevated rail
+Public transportation (excluding taxicab): Long-distance train or commuter rail
+Public transportation (excluding taxicab): Light rail, streetcar or trolley (carro p˙blico in Puerto Rico)
+Public transportation (excluding taxicab): Ferryboat
+Taxicab
+Motorcycle
+Bicycle
+Walked
+Other means
+Worked from home
+Employment Status for the Population 16 Years and Over Total
+In labor force
+In labor force: Civilian labor force
+In labor force: Civilian labor force: Employed
+In labor force: Civilian labor force: Unemployed
+In labor force: Armed Forces
+Not in labor force
+Tenure by Occupants per Room Total
+Owner occupied
+Owner occupied: 0.50 or less occupants per room
+Owner occupied: 0.51 to 1.00 occupants per room
+Owner occupied: 1.01 to 1.50 occupants per room
+Owner occupied: 1.51 to 2.00 occupants per room
+Owner occupied: 2.01 or more occupants per room
+Renter occupied
+Renter occupied: 0.50 or less occupants per room
+Renter occupied: 0.51 to 1.00 occupants per room
+Renter occupied: 1.01 to 1.50 occupants per room
+Renter occupied: 1.51 to 2.00 occupants per room
+Renter occupied: 2.01 or more occupants per room
+geom
+comm area number
+
+
+--------------------------------------------------------------------------------
+
+Citation and Use of NHGIS Data
+
+--------------------------------------------------------------------------------
+
+ 
+
+All persons are granted a limited license to use this documentation and the
+
+accompanying data, subject to the following conditions:
+
+
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+
+  data related to a particular publication. Contact us for permission for any other 
+
+  redistribution; we will consider requests for free and commercial redistribution.
+
+
+
+* CITATION: You will cite NHGIS appropriately.
+
+
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+
+      should include the following citation:
+
+
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+
+        IPUMS National Historical Geographic Information System: Version 16.0 
+
+        [dataset]. Minneapolis, MN: IPUMS. 2021. 
+
+        http://doi.org/10.18128/D050.V16.0
+
+
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+
+      recommend that you cite the use of NHGIS data as follows:
+
+
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+
+
+These terms of use are a legally binding agreement. You can use the data only in 
+
+accordance with these terms, and any other use is a violation of the agreement. 
+
+Violations may result in revocation of the agreement and prohibition from using other 
+
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+
+responsible for all damages, including reasonable attorney's fees and expenses.
+
+        
+
+In addition, we request that users send us a copy of any publications, research
+
+reports, or educational material making use of the data or documentation.
+
+
+
+Send electronic material to: nhgis@umn.edu
+
+
+
+Printed matter should be sent to:
+
+
+
+    IPUMS NHGIS
+
+    Institute for Social Research and Data Innovation
+
+    University of Minnesota
+
+    50 Willey Hall
+
+    225 19th Ave S
+
+    Minneapolis, MN 55455
+

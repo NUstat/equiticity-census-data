@@ -1,0 +1,84 @@
+GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State Postal Abbreviation
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIHHTLI:     American Indian Trust Land/ Hawaiian Home Land Indicator
+        AITS:        American Indian Tribal Subdivision (FIPS)
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        MEMI:        Metropolitan/Micropolitan Indicator Flag
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2019-2021, 116th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        ZCTA5A:      5-Digit ZIP Code Tabulation Area Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        UR:          Urban/Rural
+        PCI:         Principal City Indicator
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+        GEOID:       Census Geographic Identifier
+        NAME:        Area Name
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ALU1E001:    Total
+        ALU1E002:    Car, truck, or van
+        ALU1E003:    Car, truck, or van: Drove alone
+        ALU1E004:    Car, truck, or van: Carpooled
+        ALU1E005:    Car, truck, or van: Carpooled: In 2-person carpool
+        ALU1E006:    Car, truck, or van: Carpooled: In 3-person carpool
+        ALU1E007:    Car, truck, or van: Carpooled: In 4-person carpool
+        ALU1E008:    Car, truck, or van: Carpooled: In 5- or 6-person carpool
+        ALU1E009:    Car, truck, or van: Carpooled: In 7-or-more-person carpool
+        ALU1E010:    Public transportation (excluding taxicab)
+        ALU1E011:    Public transportation (excluding taxicab): Bus
+        ALU1E012:    Public transportation (excluding taxicab): Subway or elevated rail
+        ALU1E013:    Public transportation (excluding taxicab): Long-distance train or commuter rail
+        ALU1E014:    Public transportation (excluding taxicab): Light rail, streetcar or trolley (carro p˙blico in Puerto Rico)
+        ALU1E015:    Public transportation (excluding taxicab): Ferryboat
+        ALU1E016:    Taxicab
+        ALU1E017:    Motorcycle
+        ALU1E018:    Bicycle
+        ALU1E019:    Walked
+        ALU1E020:    Other means
+        ALU1E021:    Worked from home
+ALY3E001:    Total
+        ALY3E002:    In labor force
+        ALY3E003:    In labor force: Civilian labor force
+        ALY3E004:    In labor force: Civilian labor force: Employed
+        ALY3E005:    In labor force: Civilian labor force: Unemployed
+        ALY3E006:    In labor force: Armed Forces
+        ALY3E007:    Not in labor force
+ALZ1E001:    Total
+        ALZ1E002:    Owner occupied
+        ALZ1E003:    Owner occupied: 0.50 or less occupants per room
+        ALZ1E004:    Owner occupied: 0.51 to 1.00 occupants per room
+        ALZ1E005:    Owner occupied: 1.01 to 1.50 occupants per room
+        ALZ1E006:    Owner occupied: 1.51 to 2.00 occupants per room
+        ALZ1E007:    Owner occupied: 2.01 or more occupants per room
+        ALZ1E008:    Renter occupied
+        ALZ1E009:    Renter occupied: 0.50 or less occupants per room
+        ALZ1E010:    Renter occupied: 0.51 to 1.00 occupants per room
+        ALZ1E011:    Renter occupied: 1.01 to 1.50 occupants per room
+        ALZ1E012:    Renter occupied: 1.51 to 2.00 occupants per room
+        ALZ1E013:    Renter occupied: 2.01 or more occupants per room
