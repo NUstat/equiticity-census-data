@@ -1,0 +1,53 @@
+---
+title: "Creating Marginalization and Socioeconomic Hardship Index"
+author: "Census Team"
+date: "3/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We decided to create an index to allow people interested in the topic to get a 
+quick overview of some important demographic factors when looking at Divvy data.
+Working with our mentor and using his paper "Investigating socio-spatial 
+differences between solo ridehailing and pooled rides in diverse communities" as
+a jumping off point.  We variable correlations and used Exploratory Factor Analysis
+with a factor loading cutoff of .3, a single factor, and no rotations to create an index. 
+
+Factor analysis is a way to reduce data, so instead of having to look at 10 
+different heatmaps, each colored by a single demographic variable, we use factor 
+analysis to create an index that represents all 10 variables with a single number.  
+We use demographic variables that represent various aspects of marginalization 
+and/or socioeconomic hardship (like the percent of population that is disabled 
+or the unemployment rate) and used a factor loading cutoff of .3.  
+Factor loadings measure how strongly related each of our demographic variables 
+is to our index variable and range from -1 to 1.  The sign on the factor tells 
+us the direction of the factor variable’s relationship with our overall index 
+variable, positive is they tend to rise and fall together (like our index and 
+percent of families living below the poverty level) and negative is they rise 
+and fall in opposite directions (like our index and median income).
+
+The selected variables were:
+
+-Percent of the population that is not non-hispanic/latino white
+-Percent of the population that is disabled
+-Percent of the population that do not have access to a vehicle
+-Percentage of households that are renting
+-Percentage of households with a single parent
+-Percentage of households with no internet access
+-Unemployment Percentage
+-Percentage of the population with a bachelors degree
+-Percentage of families living below the poverty line
+-Median income
+
+
+Some variables we tried that were not selected due to low factor loadings were:
+
+-Percentage of the population that do not speak English "very well"
+-Percentage of commuters that commute by car, truck, or van
+
+We used this factor analysis to create an index and scaled the index between 0 and 1
+to be used in our analysis and visualizations.
+
