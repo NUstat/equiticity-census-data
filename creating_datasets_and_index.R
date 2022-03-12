@@ -169,17 +169,7 @@ acs_disabled_0 <- left_join(map_tracts, acs_tract_disabled, by = c("geoid10" = "
   mutate(young_disabled_adult_perc = ((`female: 18 to 34 years: with a disability (estimate)` + `male: 18 to 34 years: with a disability (estimate)`) / (`female: 18 to 34 years (estimate)` + `male: 18 to 34 years (estimate)`))*100)
 
 #Joining with tract to neighborhood correspondence table
-acs_disabled_1 <- full_join(acs_disabled_0, tract_neighborhoods, by = c("tractce10" = "TRACTCE10"))
-
-#Reading in ACS data on families living below the poverty line
-#This data was obtained from the census bureau data portal
-pov <- read_csv("data/acs_poverty.csv")
-
-#Modifying ID number for joining
-pov$geo_id = str_sub(pov$geoid, -11)
-
-#Joining ACS w/ disability data to poverty data
-acs_disabled <- left_join(acs_disabled_1, pov, by = c("geoid10" = "geo_id"))
+acs_disabled <- full_join(acs_disabled_0, tract_neighborhoods, by = c("tractce10" = "TRACTCE10"))
 
 #Turning joined table into a tibble, selecting desired columns, and grouping census tracts into community areas
 acs_neighborhoods_disabled <- acs_disabled %>%
@@ -325,8 +315,8 @@ acs_done$index <- fac$scores
 acs_done_for_csv <- acs_done %>%
   as_tibble() %>%
   mutate(index = (index - min(index)) / (max(index) - min(index))) %>%
-  dplyr::select(-c(num)) %>%
-  rename(tot_families = amc3e001, 
+  dplyr::select(-c(num, pop)) %>%
+  rename(community_id = commarea, tot_families = amc3e001, 
          inc_pov_lt_.5 = amc3e002, inc_pov_.5_to_.74 = amc3e003, inc_pov_.75_to_.99 = amc3e004, 
          inc_pov_1_to_1.24 = amc3e005, inc_pov_1.25_to_1.49 = amc3e006, inc_pov_1.5_to_1.74 = amc3e007, 
          inc_pov_1.75_to_1.84 = amc3e008, inc_pov_1.85_to_1.99 = amc3e009, inc_pov_2_to_2.99 = amc3e010, 
@@ -354,7 +344,7 @@ addWorksheet(wb, sheetName = "Sheet1")
 
 writeData(wb, sheet = 1, x = acs_done_dens)
 
-saveWorkbook(wb, file = "curated_data/final_demographic_data_no_geometry.xlsx")
+saveWorkbook(wb, file = "curated_data/final_demographic_data_no_geometry_with_connectivity.xlsx")
 
 
 
@@ -362,18 +352,18 @@ saveWorkbook(wb, file = "curated_data/final_demographic_data_no_geometry.xlsx")
 
 #Adding geometry back in to demographic data and saving as rds
 
-acs_geo <- full_join(acs_done_dens, neighborhoods, by = c("commarea" = "area_num_1")) %>%
+acs_geo <- full_join(acs_done_dens, neighborhoods, by = c("community_id" = "area_num_1")) %>%
   dplyr::select(-c(shape_area.y, shape_len.y)) %>%
   rename(shape_area = shape_area.x, shape_len = shape_len.x)
 
-write_rds(acs_geo, "curated_data/final_demographic_data_with_geometry.rds")
+write_rds(acs_geo, "curated_data/final_demographic_data_with_geometry_and_connectivity.rds")
 
 
 #Adding mapping geometry to divvy connectivity data and writing to rds
 
-comm_dens_geo <- full_join(neighborhoods, comm_dens, by = c("community" = "community_area"))
-
-write_rds(comm_dens_geo, "curated_data/final_demographic_data_with_geometry_and connectivity.rds")
+# comm_dens_geo <- full_join(neighborhoods, comm_dens, by = c("community" = "community_area"))
+# 
+# write_rds(comm_dens_geo, "curated_data/final_demographic_data_with_geometry_and connectivity.rds")
 
 #Joining density/connectivity divvy data to CMAP Community Data Snapshots and writing to excel file
 snapshot_connectivity <- full_join(acs_0, comm_dens, by = c("GEOG" = "community_area"))
@@ -412,7 +402,7 @@ for_viz <- for_viz_0 %>%
 
 #Writing viz&comm data to rds
 
-write_rds(for_viz, "curated_data/selected_data_for_viz_com_fixed.rds")
+write_rds(for_viz, "curated_data/selected_data_for_viz_com.rds")
 
 for_viz_csv <- for_viz %>%
   dplyr::select(-c(geometry))
@@ -427,4 +417,13 @@ writeData(wb, sheet = 1, x = for_viz_csv)
 
 saveWorkbook(wb, file = "curated_data/for_viz_no_geometry.xlsx")
 
+just_index <- for_viz_csv %>%
+  dplyr::select(community_id, community, msh_index_score)
 
+wb <- createWorkbook()
+
+addWorksheet(wb, sheetName = "Sheet1")
+
+writeData(wb, sheet = 1, x = just_index)
+
+saveWorkbook(wb, file = "curated_data/community_index.xlsx")
