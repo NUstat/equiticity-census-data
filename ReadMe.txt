@@ -3,11 +3,10 @@
 Hello!
 
 This is a GitHub for a project we did for a non-profit interested in Chicago’s Divvy bikes.
-We worked over the course of 10 weeks to combine datasets and create scripts focusing on
+We worked to create scripts focusing on
 Census data and other related data for Chicago neighborhoods.
 
 We hope some of these scripts or data can be helpful in exploring demographics in Chicago.
-(Or any other metro area you’re curious about)
 
 To give you a sense of how to look into our repository, here’s a brief description of most of the files.
 
@@ -26,7 +25,7 @@ files, which must be used with an appropriate package to be
 added onto a visualization.
 
 # ACS_Chicago_Agg.csv
-The aggregated American Community Survey from 2015-2019.
+The aggregated American Community Survey (ACS) from 2015-2019.
 Source: https://data2.nhgis.org/main
 
 # CensusTractsTiger2010.csv
@@ -45,13 +44,13 @@ A sliver of Divvy trip info from Divvy itself, which we used to test some of our
 Source: https://divvy-tripdata.s3.amazonaws.com/index.html
 
 #census_team_2015_2019.dat.csv
-A combined dataset that we made for the rest of the teams for testing purposes.
+A combined dataset that we made by cleaning and collecting census tract-level data.
 
 #comm_density_2021.csv
-Community Areas in Chicago with the average amount of Divvy stations in a 2 mile radius.
+Community Areas in Chicago with the average amount of Divvy stations in a 2 mile radius (which was calculated by the Divvy Core Data Team).
 
 #commute.csv
-Calculations based on the type of transportation commonly used in Chicago.
+Specific data on methods of commuting by Chicago residents from the ACS
 
 #population_fixed.csv
 Community populations for Chicago.
@@ -69,27 +68,28 @@ friendly .rds format, and in Excel .xlsx format, along with
 a codebook, in .pdf format.
 
 # codebook_for_viz_and_comm_data.pdf
-A codebook for the following data files, meant for the visualization team.
+A codebook for the data files meant for the Visualization and Communication Team.
 
 # community_index.xlsx
-Our marginalization & economic hardship index, with one row for every community in Chicago.
+Our marginalization & socioeconomic hardship index, with one row for every community in Chicago.  See index_creation.Rmd for more details.
 
 # demographic_data_community_codebook.pdf
+A codebook for our final demographic data files.
 
-# final_geographic data_no_geometry_with_connection…
-Demographic data for every community in Chicago without geographic information.
+# final_demoographic_data_no_geometry_with_connection…
+Chicago demographic and divvy data on the community area-level, cleaned and combined data from the ACS, the CMAP Community Data Snapshots, the Divvy Core Data Team's datasets, and the Divvy open data portal, without mapping information.
 
 # final_demographic_data_with_geometry_and_connection…
-Demographic data for every community in Chicago with geographic information.
+Same data as in the previous file but with mapping information.
 
 # for_viz_no_geometry.xlsx
-Demographic data for every community in Chicago without geographic information.
+Divvy and demographic data on the community area-level used the by Visualization and Communication team without mapping information.
 
 # selected_data_for_viz_com.rds
-A slice of demographic data of some community in Chicago without geographic information.
+Same data as in the previous file but with mapping information.
 
 # snapshots_with_connectivity.xlsx
-Demographic data for every community in Chicago without geographic information.
+CMAP Community Data Snapshots with Divvy connectivity (from Divvy Core Data Team) added.
 
 - census_data_automation
 
@@ -100,23 +100,24 @@ and an “output” folder.
 
 - visualizations.R
 
-Script that contains all of our visualizations from our presentation, as well as additional ones.
+Script that contains all of our visualizations from our presentation, as well as some additional ones.
 The additional visualizations are helpful to understand the dataset.
 
-- creating-datasets_and_index.R
+- creating_datasets_and_index.R
 
 Brings in ACS data, and outputs a combined dataset with other sources of data in the folder.
-Latter half of the script creates our marginalization index.
+Latter half of the script creates our marginalization index.  This script outputs all the data
+files in the curated_data folder.
 
 - generic_matching_script.R
 
 Script that allows you to switch between geographical areas, census tracts, and other types
-of geographic areas using shape files.
+of geographic areas and map points (like Divvy stations) within those areas using shape files.
 
 - variable_distributions.R
 
 A script that creates several histograms and scatter plots with certain variable distributions.
-Mainly to get a grasp of the data.
+Mainly to get a grasp of the data.  Some explorations of variable correlations.
 
 - bikeroutesandroads.R
 
