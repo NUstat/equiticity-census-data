@@ -30,7 +30,7 @@ added onto a visualization.
 
 ### ACS_Chicago_Agg.csv
 The aggregated American Community Survey (ACS) from 2015-2019.
-Source: https://data2.nhgis.org/main
+Source: https://datahub.cmap.illinois.gov/dataset/community-data-snapshots-raw-data
 
 ### CensusTractsTiger2010.csv
 Geographic information of Census Tracts from the 2010 Census.
@@ -42,6 +42,7 @@ Source:  https://www.walkscore.com/IL/Chicago
 
 ### Divvy_Bicycle_Stations.csv
 A more detailed dataset with information on Divvy bike stations, not included in the other datasets.
+Source: https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations-Historical/eq45-8inv
 
 ### Divvy_Trips_2020_Q1_data.csv
 A sliver of Divvy trip info from Divvy itself, which we used to test some of our visualizations.
@@ -49,15 +50,18 @@ Source: https://divvy-tripdata.s3.amazonaws.com/index.html
 
 ### census_team_2015_2019.dat.csv
 A combined dataset that we made by cleaning and collecting census tract-level data.
+Source: https://usa.ipums.org/usa/
 
 ### comm_density_2021.csv
 Community Areas in Chicago with the average amount of Divvy stations in a 2 mile radius (which was calculated by the Divvy Core Data Team).
 
 ### commute.csv
 Specific data on methods of commuting by Chicago residents from the ACS
+Source: https://usa.ipums.org/usa/
 
 ### population_fixed.csv
 Community populations for Chicago.
+Source: https://www.cmap.illinois.gov/documents/10180/126764/_Combined_AllCCAs.pdf/
 
 ### poverty_data.csv
 More specific poverty data from the ACS 5-year 2015-2019.
