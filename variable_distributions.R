@@ -1,4 +1,5 @@
 library(tidyverse)
+library(corrplot)
 
 data <- read_csv("data/census_team_2015_2019_dat.csv")
 data <- data %>% mutate(
@@ -160,6 +161,7 @@ data %>% ggplot(aes(x = `white alone (estimate)` / `race total (estimate)`, y = 
   geom_point() +
   theme_minimal()
 
+#Exploring correlations
 
 corr_matrix <- data %>% dplyr::select(c(`prop some degree (estimate)`,
                 `prop white (estimate)`,
@@ -172,3 +174,33 @@ corr_matrix <- data %>% dplyr::select(c(`prop some degree (estimate)`,
                 `prop 1.01 or more occupants per room (estimate)`,
                 `median household income in the past 12 months (in 2019 inflation-adjusted dollars) (estimate)`)) %>% 
   cor(use = "complete.obs")
+
+
+
+for_cor_0 <- pop_data %>%
+  dplyr::select(CT_SP_WCHILD, LING_ISO, NO_INTERNET, NO_VEH, UNEMP, MEDINC, RENT_OCC_HU, INCPERCAP, LT_HS)
+
+for_cor <- acs_agg %>%
+  dplyr::select(non_white_perc, disabled_perc, single_parent_perc, not_very_well_eng_perc, no_internet_perc, unemp_perc,
+                renting_hh_perc, less_hs_perc, no_vech_perc)
+
+for_cor_1 <- acs_agg %>%
+  dplyr::select(non_white_perc, disabled_perc, single_parent_perc, no_internet_perc, unemp_perc,
+                renting_hh_perc, no_vech_perc, medinc, walk_bike_perc, not_very_well_eng_perc)
+
+for_fact_0 <- acs_final %>%
+  dplyr::select(non_white_perc, disabled_perc, no_vech_perc, renting_hh_perc, 
+                single_parent_perc, not_very_well_eng_perc, no_internet_perc, 
+                unemp_perc, bach, under_pov_perc, medinc)
+
+for_fact <- acs_final %>%
+  dplyr::select(non_white_perc, disabled_perc,
+                single_parent_perc, no_internet_perc, 
+                unemp_perc, bach, medinc)
+
+
+corrplot(cor(for_cor_0))
+corrplot(cor(for_cor))
+corrplot(cor(for_cor_1))
+corrplot(cor(for_fact_0))
+corrplot(cor(for_fact))
