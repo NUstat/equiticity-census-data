@@ -133,14 +133,6 @@ Mainly to get a grasp of the data.  Some explorations of variable correlations.
 
 Creates plots including bike route and roads in Chicago. 
 
-### data_manipulations.R
-
-This script will take in some of the data files in our Github, and combine them.
-It will also provide some helpful visualizations.
-
-### playing_with_divvy_data.R
-
-Test script to understand Divvy data slice in our data folder.
 
 # R Markdown files
 
