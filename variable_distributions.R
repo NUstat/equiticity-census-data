@@ -1,7 +1,7 @@
 library(tidyverse)
 library(corrplot)
 
-data <- read_csv("data/census_team_2015_2019_dat.csv")
+data <- read_csv("data/census_team_2015_2019_dat_new.csv")
 data <- data %>% mutate(
   `some degree (estimate)` = `associate's degree (estimate)` + `bachelor's degree (estimate)` + `master's degree (estimate)` + `professional school degree (estimate)` + `doctorate degree (estimate)`,
   `approximate total travel time (estimate)` = `90 or more minutes (estimate)` * 90 +
