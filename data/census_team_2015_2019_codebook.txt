@@ -1,0 +1,288 @@
+CENSUS TEAM DATASET (2015-2019) Aggregated (Feb 2nd 2021 - v1)
+
+Demographic features included:
+	Educational Attainment for the Population 25 Years and Over
+	Race
+	Travel Time to Work
+	Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+	Sex by Age by Disability Status
+
+*All of the column names are non-bold*
+
+Year:             2015-2019
+Geographic level: Census Tract (by State--County)
+
+Context Fields
+
+gis join match code
+data file year
+state postal abbreviation
+state name
+state code
+county name
+county code
+census tract code
+census geographic identifier
+area name
+geom
+
+ 
+1. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15003
+   NHGIS code:  ALWG
+   Data type:   (E) Estimates
+
+education total (estimate)
+no schooling completed (estimate)
+nursery school (estimate)
+kindergarten (estimate)
+1st grade (estimate)
+2nd grade (estimate)
+3rd grade (estimate)
+4th grade (estimate)
+5th grade (estimate)
+6th grade (estimate)
+7th grade (estimate)
+8th grade (estimate)
+9th grade (estimate)
+10th grade (estimate)
+11th grade (estimate)
+12th grade, no diploma (estimate)
+regular high school diploma (estimate)
+ged or alternative credential (estimate)
+some college, less than 1 year (estimate)
+some college, 1 or more years, no degree (estimate)
+associate's degree (estimate)
+bachelor's degree (estimate)
+master's degree (estimate)
+professional school degree (estimate)
+doctorate degree (estimate)
+
+ 
+2. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15003
+   NHGIS code:  ALWG
+   Data type:   (M) Margins of error
+
+education total (margin of error)
+no schooling completed (margin of error)
+nursery school (margin of error)
+kindergarten (margin of error)
+1st grade (margin of error)
+2nd grade (margin of error)
+3rd grade (margin of error)
+4th grade (margin of error)
+5th grade (margin of error)
+6th grade (margin of error)
+7th grade (margin of error)
+8th grade (margin of error)
+9th grade (margin of error)
+10th grade (margin of error)
+11th grade (margin of error)
+12th grade, no diploma (margin of error)
+regular high school diploma (margin of error)
+ged or alternative credential (margin of error)
+some college, less than 1 year (margin of error)
+some college, 1 or more years, no degree (margin of error)
+associate's degree (margin of error)
+bachelor's degree (margin of error)
+master's degree (margin of error)
+professional school degree (margin of error)
+doctorate degree (margin of error)
+
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  ALUC
+   Data type:   (E) Estimates
+
+race total (estimate)
+white alone (estimate)
+black or african american alone (estimate)
+american indian and alaska native alone (estimate)
+asian alone (estimate)
+native hawaiian and other pacific islander alone (estimate)
+some other race alone (estimate)
+two or more races (estimate)
+two or more races: two races including some other race (estimate)
+two or more races: two races excluding some other race, and three or more races (estimate)
+
+4. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  ALUC
+   Data type:   (M) Margins of error
+
+race total (margin of error)
+white alone (margin of error)
+black or african american alone (margin of error)
+american indian and alaska native alone (margin of error)
+asian alone (margin of error)
+native hawaiian and other pacific islander alone (margin of error)
+some other race alone (margin of error)
+two or more races (margin of error)
+two or more races: two races including some other race (margin of error)
+two or more races: two races excluding some other race, and three or more races (margin of error)
+
+5. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work from home
+   Source code: B08303
+   NHGIS code:  ALU3
+   Data type:   (E) Estimates
+
+travel total (estimate)
+less than 5 minutes (estimate)
+5 to 9 minutes (estimate)
+10 to 14 minutes (estimate)
+15 to 19 minutes (estimate)
+20 to 24 minutes (estimate)
+25 to 29 minutes (estimate)
+30 to 34 minutes (estimate)
+35 to 39 minutes (estimate)
+40 to 44 minutes (estimate)
+45 to 59 minutes (estimate)
+60 to 89 minutes (estimate)
+90 or more minutes (estimate)
+
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work from home
+   Source code: B08303
+   NHGIS code:  ALU3
+   Data type:   (M) Margins of error
+
+travel total (margin of error)
+less than 5 minutes (margin of error)
+5 to 9 minutes (margin of error)
+10 to 14 minutes (margin of error)
+15 to 19 minutes (margin of error)
+20 to 24 minutes (margin of error)
+25 to 29 minutes (margin of error)
+30 to 34 minutes (margin of error)
+35 to 39 minutes (margin of error)
+40 to 44 minutes (margin of error)
+45 to 59 minutes (margin of error)
+60 to 89 minutes (margin of error)
+90 or more minutes (margin of error)
+
+7. Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  ALW1
+   Data type:   (E) Estimates
+
+median household income in the past 12 months (in 2019 inflation-adjusted dollars) (estimate)
+
+8. Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  ALW1
+   Data type:   (M) Margins of error
+
+median household income in the past 12 months (in 2019 inflation-adjusted dollars) (margin of error)
+
+9. Sex by Age by Disability Status
+   Universe:    Civilian noninstitutionalized population
+   Source code: B18101
+   NHGIS code:  AMC4
+   Data type:   (E) Estimates
+
+total (estimate)
+male (estimate)
+male: under 5 years (estimate)
+male: under 5 years: with a disability (estimate)
+male: under 5 years: no disability (estimate)
+male: 5 to 17 years (estimate)
+male: 5 to 17 years: with a disability (estimate)
+male: 5 to 17 years: no disability (estimate)
+male: 18 to 34 years (estimate)
+male: 18 to 34 years: with a disability (estimate)
+male: 18 to 34 years: no disability (estimate)
+male: 35 to 64 years (estimate)
+male: 35 to 64 years: with a disability (estimate)
+male: 35 to 64 years: no disability (estimate)
+male: 65 to 74 years (estimate)
+male: 65 to 74 years: with a disability (estimate)
+male: 65 to 74 years: no disability (estimate)
+male: 75 years and over (estimate)
+male: 75 years and over: with a disability (estimate)
+male: 75 years and over: no disability (estimate)
+female (estimate)
+female: under 5 years (estimate)
+female: under 5 years: with a disability (estimate)
+female: under 5 years: no disability (estimate)
+female: 5 to 17 years (estimate)
+female: 5 to 17 years: with a disability (estimate)
+female: 5 to 17 years: no disability (estimate)
+female: 18 to 34 years (estimate)
+female: 18 to 34 years: with a disability (estimate)
+female: 18 to 34 years: no disability (estimate)
+female: 35 to 64 years (estimate)
+female: 35 to 64 years: with a disability (estimate)
+female: 35 to 64 years: no disability (estimate)
+female: 65 to 74 years (estimate)
+female: 65 to 74 years: with a disability (estimate)
+female: 65 to 74 years: no disability (estimate)
+female: 75 years and over (estimate)
+female: 75 years and over: with a disability (estimate)
+female: 75 years and over: no disability (estimate)
+
+10. Sex by Age by Disability Status
+   Universe:    Civilian noninstitutionalized population
+   Source code: B18101
+   NHGIS code:  AMC4
+   Data type:   (M) Margins of error
+
+total (margin of error)
+male (margin of error)
+male: under 5 years (margin of error)
+male: under 5 years: with a disability (margin of error)
+male: under 5 years: no disability (margin of error)
+male: 5 to 17 years (margin of error)
+male: 5 to 17 years: with a disability (margin of error)
+male: 5 to 17 years: no disability (margin of error)
+male: 18 to 34 years (margin of error)
+male: 18 to 34 years: with a disability (margin of error)
+male: 18 to 34 years: no disability (margin of error)
+male: 35 to 64 years (margin of error)
+male: 35 to 64 years: with a disability (margin of error)
+male: 35 to 64 years: no disability (margin of error)
+male: 65 to 74 years (margin of error)
+male: 65 to 74 years: with a disability (margin of error)
+male: 65 to 74 years: no disability (margin of error)
+male: 75 years and over (margin of error)
+male: 75 years and over: with a disability (margin of error)
+male: 75 years and over: no disability (margin of error)
+female (margin of error)
+female: under 5 years (margin of error)
+female: under 5 years: with a disability (margin of error)
+female: under 5 years: no disability (margin of error)
+female: 5 to 17 years (margin of error)
+female: 5 to 17 years: with a disability (margin of error)
+female: 5 to 17 years: no disability (margin of error)
+female: 18 to 34 years (margin of error)
+female: 18 to 34 years: with a disability (margin of error)
+female: 18 to 34 years: no disability (margin of error)
+female: 35 to 64 years (margin of error)
+female: 35 to 64 years: with a disability (margin of error)
+female: 35 to 64 years: no disability (margin of error)
+female: 65 to 74 years (margin of error)
+female: 65 to 74 years: with a disability (margin of error)
+female: 65 to 74 years: no disability (margin of error)
+female: 75 years and over (margin of error)
+female: 75 years and over: with a disability (margin of error)
+female: 75 years and over: no disability (margin of error)
+
+
+
+Citation:
+
+IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 16.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2021. 
+        http://doi.org/10.18128/D050.V16.0
+
+CensusTractsTIGER2010
