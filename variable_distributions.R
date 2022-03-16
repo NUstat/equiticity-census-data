@@ -176,15 +176,14 @@ corr_matrix <- data %>% dplyr::select(c(`prop some degree (estimate)`,
   cor(use = "complete.obs")
 
 
+acs_final <- read_rds("curated_data/final_demographic_data_with_geometry.rds")
 
-for_cor_0 <- pop_data %>%
-  dplyr::select(CT_SP_WCHILD, LING_ISO, NO_INTERNET, NO_VEH, UNEMP, MEDINC, RENT_OCC_HU, INCPERCAP, LT_HS)
 
-for_cor <- acs_agg %>%
+for_cor <- acs_final %>%
   dplyr::select(non_white_perc, disabled_perc, single_parent_perc, not_very_well_eng_perc, no_internet_perc, unemp_perc,
                 renting_hh_perc, less_hs_perc, no_vech_perc)
 
-for_cor_1 <- acs_agg %>%
+for_cor_1 <- acs_final %>%
   dplyr::select(non_white_perc, disabled_perc, single_parent_perc, no_internet_perc, unemp_perc,
                 renting_hh_perc, no_vech_perc, medinc, walk_bike_perc, not_very_well_eng_perc)
 
@@ -199,7 +198,6 @@ for_fact <- acs_final %>%
                 unemp_perc, bach, medinc)
 
 
-corrplot(cor(for_cor_0))
 corrplot(cor(for_cor))
 corrplot(cor(for_cor_1))
 corrplot(cor(for_fact_0))
