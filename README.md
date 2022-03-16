@@ -10,6 +10,9 @@ This is a GitHub for a project we did for a non-profit interested in Chicago’s
 We worked to create scripts focusing on
 Census data and other related data for Chicago neighborhoods.
 
+We also created a visualization tool using kepler.gl which can be accessed with this link.
+https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/53m1fdu8lkh9ezx/keplergl_ud79hnq.json
+
 We hope some of these scripts or data can be helpful in exploring demographics in Chicago.
 
 To give you a sense of how to look into our repository, here’s a brief description of most of the files.
@@ -102,7 +105,8 @@ CMAP Community Data Snapshots with Divvy connectivity (from Divvy Core Data Team
 ## census_data_automation
 
 A census data automation tool, made in Python. Contains the needed “data”, code,
-and an “output” folder.
+and an “output” folder. Documentation on how to use the automation tool is in Census Data Automation.docx
+visualize_data.ipynb is the script used to create kepler.gl visualization. 
 
 # Scripts
 
