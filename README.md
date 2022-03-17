@@ -6,11 +6,11 @@ Scripts, and data that were used to analyze census data in relation to micro-tra
 
 Hello!
 
-This is a GitHub for a project we did for a non-profit interested in Chicago’s Divvy bikes.
-We worked to create scripts focusing on
+This is a GitHub for a project we did for a non-profit interested in Chicago’s Divvy bikes. We worked to create scripts focusing on
 Census data and other related data for Chicago neighborhoods.
 
-We also created a visualization tool using kepler.gl which can be accessed with this link.
+We also created a visualization tool using kepler.gl which can be accessed with this link:
+
 https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/53m1fdu8lkh9ezx/keplergl_ud79hnq.json
 
 We hope some of these scripts or data can be helpful in exploring demographics in Chicago.
@@ -106,7 +106,7 @@ CMAP Community Data Snapshots with Divvy connectivity (from Divvy Core Data Team
 
 A census data automation tool, made in Python. Contains the needed “data”, code,
 and an “output” folder. Documentation on how to use the automation tool is in Census Data Automation.docx
-visualize_data.ipynb is the script used to create kepler.gl visualization. 
+visualize_data.ipynb is the script used to create kepler.gl visualization. If you would like to add additional data to the visualization, it must be in a .csv or .json format.
 
 # Scripts
 
