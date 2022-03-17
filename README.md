@@ -91,7 +91,7 @@ A codebook for our final demographic data files.
 Chicago demographic and divvy data on the community area-level, cleaned and combined data from the ACS, the CMAP Community Data Snapshots, the Divvy Core Data Team's datasets, and the Divvy open data portal, without mapping information.
 
 ### final_demographic_data_with_geometry_and_connection…
-Same data as in the previous file but with mapping information.
+Same data as in the previous file but with mapping information. The .csv version of this file can be used to add out index to the Kepler tool.
 
 ### for_viz_no_geometry.xlsx
 Divvy and demographic data on the community area-level used the by Visualization and Communication team without mapping information.
