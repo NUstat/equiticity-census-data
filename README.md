@@ -11,7 +11,7 @@ Census data and other related data for Chicago neighborhoods.
 
 We also created a visualization tool using kepler.gl which can be accessed with this link:
 
-https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/53m1fdu8lkh9ezx/keplergl_ud79hnq.json
+https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/js9wqmy0io8xgzd/keplergl_n1r6r0k.json
 
 We hope some of these scripts or data can be helpful in exploring demographics in Chicago.
 
