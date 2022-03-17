@@ -1,6 +1,6 @@
-# 2022-359 CensusTeam
-STAT 359 Census Data Team
+# Equiticity Census Data
 
+Scripts, and data that were used to analyze census data in relation to micro-transit for a Chicago non-profit.
 
 # Introduction
 
@@ -148,10 +148,10 @@ A detailed breakdown of our Marginalization and Economic Hardship index.
 ## How to cite
 
 IEEE:
-Jung, B, Chalas Cuevas, E, Braud, I, Chandler-Holtz, L, Coble, M (2022) 2022-352CensusTeam [Source code]. INSERT LINK HERE
+Jung, B, Chalas Cuevas, E, Braud, I, Chandler-Holtz, L, Coble, M (2022) Equiticity Census Data [Source code]. https://github.com/NUstat/equiticity-census-data
 
 ACM:
-Benedict Jung, Edwin Chalas Cuevas, Ian Braud, Lauren Chandler-Holtz, Mat Coble. 2022. 2022-352CensusTeam. INSERT LINK HERE
+Benedict Jung, Edwin Chalas Cuevas, Ian Braud, Lauren Chandler-Holtz, Mat Coble. 2022. Equiticity Census Data. https://github.com/NUstat/equiticity-census-data
 
 CSE:
-Jung, B, Chalas Cuevas, E, Braud, I, Chandler-Holtz, L, Coble, M. 2022-352CensusTeam. San Francisco (CA); GitHub; INSERT LINK HERE
+Jung, B, Chalas Cuevas, E, Braud, I, Chandler-Holtz, L, Coble, M. Equiticity Census Data. San Francisco (CA); GitHub; https://github.com/NUstat/equiticity-census-data
